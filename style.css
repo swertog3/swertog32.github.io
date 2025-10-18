@@ -17,10 +17,10 @@ body {
 /* Стили для header и footer */
 header, footer {
     background-color: #074207 !important; /* Цвет фона - темно-зеленый */
-    padding: 0px 0; /* Отступы сверху и снизу */
+    padding: 20px 0; /* Отступы сверху и снизу */
     text-align: left; /* Выравнивание текста по центру */
     width: 100%; /* Ширина на всю доступную область */
-    box-sizing: border-box;
+    
 }
 
 /* Стили для логотипа .L */
@@ -118,6 +118,7 @@ table, ul, .1 {
     width: 100%;         /* Элементы на всю ширину */
     margin-bottom: 20px; /* Отступы между элементами */
 }
+
 
 
 

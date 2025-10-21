@@ -8,6 +8,8 @@ body {
 
 /* Контейнер .F - основной контейнер для контента */
 .F {
+    display: flex; /* или display: grid; */
+    flex-direction: column;
     max-width: 960px; /* Максимальная ширина контейнера */
     margin: 0 auto; /* Центрирование контейнера */
     padding: 0 15px; /* Отступы слева и справа */
@@ -16,12 +18,12 @@ body {
 
 /* Стили для header и footer */
 header, footer {
-    background-color: #074207 !important; /* Цвет фона - темно-зеленый */
+    background-color: #074207 ; /* Цвет фона - темно-зеленый */
     padding: 20px 0; /* Отступы сверху и снизу */
     text-align: left; /* Выравнивание текста по центру */
     width: 100%; /* Ширина на всю доступную область */
     box-sizing: border-box;
-    
+
 }
 
 /* Стили для логотипа .L */
@@ -97,18 +99,49 @@ main .F {
 }
 
 /* Для мобильных устройств */
+
 @media (max-width: 767px) {
-    main .F {
-        display: flex;
-        flex-direction: column;
+    .links {
+        order: 3;
     }
-    main .data {
-        order: 1;         /* Таблица выше */
+    h2:first-of-type { /* Заголовок "Таблица" */
+        order: 1;
     }
-    
-    main .links {
-        order: 2;         /* Список ниже */
+    .data {
+        order: 2;
     }
+    h2:nth-of-type(2) { /* Заголовок "Форма" */
+        order: 4;
+    }
+    form {
+        order: 5;
+        margin-top: auto; /* "Прижимаем" форму к низу */
+    }
+
+    nav{
+        float:left;
+        background-color: #ffffff !important;
+        width: 100%; /* На всю ширину экрана */
+        margin-left: 0; /* Убираем возможные отступы слева */
+        padding: 10px 0; /* Вертикальные отступы для читаемости */
+        box-sizing: border-box; /* Учитываем padding в общей ширине */
+    }
+
+    nav ul {
+
+        flex-direction: column; /* Каждый пункт — с новой строки */
+        align-items: flex-start; /* Выравнивание по левому краю */
+        width: 100%; /* Список на всю ширину */
+        padding: 0 15px; /* Внутренние отступы (если нужно) */
+        box-sizing: border-box;
+    }
+
+    nav li {
+        width: 100%; /* Пункт занимает всю ширину */
+        text-align: left; /* Текст слева */
+        margin-bottom: 12px; /* Немного увеличим отступ для читаемости */
+    }
+
 }
 
 /* Для планшетов и десктопов */
@@ -119,21 +152,8 @@ main .F {
 }
 
 /* Дополнительные стили для всех элементов */
-table, ul, .1 {
+table, ul, .cla {
     width: 100%;         /* Элементы на всю ширину */
     margin-bottom: 20px; /* Отступы между элементами */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.F { display: flex; flex-direction: column; }

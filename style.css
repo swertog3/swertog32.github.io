@@ -99,8 +99,8 @@ main .F {
 /* Для мобильных устройств */
 @media (max-width: 767px) {
     main .F {
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
     main .data {
         order: 1;         /* Таблица выше */
@@ -123,6 +123,7 @@ table, ul, .1 {
     width: 100%;         /* Элементы на всю ширину */
     margin-bottom: 20px; /* Отступы между элементами */
 }
+
 
 
 

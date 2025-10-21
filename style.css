@@ -91,25 +91,29 @@ table thead th {
     padding: 10px; /* Внутренние отступы */
     border: 1px solid #000000; /* Граница черного цвета */
 }
-main.F {
+main .F {
     display: flex;         /* Включаем flex-контейнер */
     flex-direction: column; /* Элементы в столбик */
 }
 
 /* Для мобильных устройств */
 @media (max-width: 767px) {
-    main table {
+    main .F {
+    display: flex;
+    flex-direction: column;
+    }
+    main .data {
         order: 1;         /* Таблица выше */
     }
     
-    main ul {
+    main .links {
         order: 2;         /* Список ниже */
     }
 }
 
 /* Для планшетов и десктопов */
 @media (min-width: 768px) {
-    main.F {
+    main .F {
         flex-direction: column; /* Сохраняем вертикальный порядок */
     }
 }
@@ -119,6 +123,7 @@ table, ul, .1 {
     width: 100%;         /* Элементы на всю ширину */
     margin-bottom: 20px; /* Отступы между элементами */
 }
+
 
 
 
